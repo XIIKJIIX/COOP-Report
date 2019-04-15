@@ -18,6 +18,10 @@
 \RequirePackage{afterpage}
 \RequirePackage{subfigure}
 \RequirePackage{etoolbox}
+\RequirePackage[labelfont=bf]{caption}
+\RequirePackage{geometry}
+
+\geometry{text={7in,9.5in},headheight=15pt}
 
 % ##### new command for Roman number
 \newcommand{\rNum}[1]{\lowercase\expandafter{\romannumeral #1\relax}}
@@ -25,8 +29,12 @@
 % ##### Font and Typing
 \XeTeXlinebreaklocale "th_TH" %สำหรับตัดคำ
 \XeTeXlinebreakskip = 0pt plus 1pt
-\setmainfont[Scale=1.3]{Angsana New}
-\linespread{1.3}
+\setmainfont[Scale=1.33]{Angsana New}
+\linespread{1.33}
+
+\renewcommand{\large}{\fontsize{13.53}{16.24}\selectfont}
+\renewcommand{\Large}{\fontsize{15.04}{18.05}\selectfont}
+\renewcommand{\LARGE}{\fontsize{18.04}{21.65}\selectfont}
 
 % ##### Set Chapter and Section Style
 \titleformat{\chapter}[display]
@@ -47,7 +55,7 @@
 \renewcommand{\chaptername}{บทที่}
 \renewcommand{\figurename}{รูปที่}
 \renewcommand{\tablename}{ตารางที่}
-\renewcommand{\listfigurename}{สารบัญภาพ}
+\renewcommand{\listfigurename}{สารบัญรูป}
 \renewcommand{\listtablename}{สารบัญตาราง}
 
 % ##### Set a pagination style to be on top right of page
@@ -71,6 +79,9 @@
     บ\or ป\or ผ\or ฝ\or พ\or ฟ\or ภ\or ม\or ย\or ร\or ฤ\or ล\or ฦ\or ว\or
     ศ\or ษ\or ส\or ห\or ฬ\or อ\else ฮ\else\xpg@ill@value{#1}{thalph}\fi}
 \renewcommand\thesubfigure{(\thaialph{subfigure})}
+
+\captionsetup[table]{labelsep=space}
+\captionsetup[figure]{labelsep=space}
 
 % ##### TOC Overrided 
 % อ้างอิงจาก http://kt-linux.blogspot.com/2011/01/latex.html
@@ -143,9 +154,9 @@
     \begin{center}
         {\LARGE \textbf{\listtablename} }
     \end{center} \vskip2em
-    \begin{flushright}
-        \textbf{หน้า}
-    \end{flushright}
+    \textbf{ตารางที่}
+    \hfill
+    \textbf{หน้า} \par
     \resetlinenumber[1]
     \newcounter{lotitem}
     \@starttoc{lot}%
@@ -153,7 +164,7 @@
     \cleardoublepage
 }
 
-\titlecontents{table}[0mm]{\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listftablename}}{\contentspush{\tablename\hspace{1ex}\thecontentslabel\hspace{2mm}}}{}{\hfill \contentspage}
+\titlecontents{table}[0mm]{\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listftablename}}{\contentspush{\thecontentslabel\hspace{2mm}}}{}{\hfill \contentspage}
 
 % ##### LOF Overrided 
 \newcommand{\lofheadcont}[3]{
@@ -165,9 +176,11 @@
         \begin{center}
             {\LARGE \textbf{#3 (ต่อ)} }
         \end{center}  \vskip2em
-        \begin{flushright}
-            \textbf{หน้า}
-        \end{flushright}
+        \begin{center}
+                    \textbf{รูปที่}
+            \null\hfill
+            \textbf{หน้า} \par
+        \end{center}
     }{}
 }
 
@@ -175,9 +188,9 @@
     \begin{center}
         {\LARGE \textbf{\listfigurename} }
     \end{center} \vskip2em
-    \begin{flushright}
-        \textbf{หน้า}
-    \end{flushright}
+    \textbf{รูปที่}
+    \null\hfill
+    \textbf{หน้า} \par
     \resetlinenumber[1]
     \newcounter{lofitem}
     \@starttoc{lof}
@@ -187,7 +200,7 @@
 }
 
 % Indent the next line of the entry by the width of the label with \contentspush
-\titlecontents{figure}[0mm]{\stepcounter{lofitem}\lofheadcont{\thelinenumber}{\thelofitem}{\listfigurename}}{\contentspush{\figurename\hspace{1ex}\thecontentslabel\hspace{2mm}}}{}{\hfill\contentspage}
+\titlecontents{figure}[0mm]{\stepcounter{lofitem}\lofheadcont{\thelinenumber}{\thelofitem}{\listfigurename}}{\contentspush{\thecontentslabel\hspace{4mm}}}{}{\hfill\contentspage}
 
 %  Newcommand each required page
 \newcommand{\makecover}{
@@ -195,7 +208,7 @@
     \thispagestyle{empty}
     
     \begin{center}
-        \Large{\textbf{รายงานการปฏิบัติงานสหกิจศึกษา}} \\
+        \Large{\textbf{รายงานการปฏิบัติงานสหกิจศึกษา}} \vskip1cm
         \LARGE{\textbf{เรื่อง}} \\
         \LARGE{\textbf{\ThesisTiTle}} \\
         \LARGE{\textbf{\ThesisTiTleENG}} \vskip3cm
@@ -252,7 +265,7 @@
     \begin{large}
         \noindent\textbf{COPYRIGHT \AcaYAD \\
             FACULTY OF INFORMATION TECHNOLOGY \\
-            KING MONGKUT’S INSTITUTE OF ECHNOLOGY LADKRABANG}
+            KING MONGKUT’S INSTITUTE OF TECHNOLOGY LADKRABANG}
     \end{large}
 }
 
@@ -288,10 +301,10 @@
 \newcommand{\makeack}[1]{
     %-- ACKNOWLEDGEMENTS Page -------------------------------------------
     \newpage
+    \thispagestyle{empty}
     \begin{center}
         {\LARGE \textbf{กิตติกรรมประกาศ} }
     \end{center} \vskip2em
-    \addcontentsline{toc}{chapter}{กิตติกรรมประกาศ}
     
     ตามที่ข้าพเจ้า \AuName \ ได้มาปฏิบัติงานสหกิจศึกษา ณ \Company \ ตั้งแต่วันที่ \StartDWork \ ถึงวันที่ \EndDWork \ ทำให้ข้าพเจ้าได้รับความรู้และประสบการณ์ต่าง ๆ ที่มีคุณค่ามากมาย สำหรับรายงานสหกิจศึกษาฉบับนี้สำเร็จลงได้ด้วยดี จากความช่วยเหลือและความร่วมมือสนับสนุนของหลายฝ่าย ดังนี้ 
     
@@ -359,43 +372,56 @@
     
     \vskip1cm
     \begin{center}
-        \textbf{\large บทคัดย่อ}
+        \textbf{\Large บทคัดย่อ}
     \end{center}
     
     #1
 }
 
-\newcommand{\makeabstracteng}[1]{
+\newcommand{\makeengabstract}[1]{
     %-- Abstract Page ------------------------------------------
     \newpage
-    \addcontentsline{toc}{chapter}{บทคัดย่อ ภาษาอังกฤษ}
+    \addcontentsline{toc}{chapter}{Abstract}
     
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
-            \textbf{Project Title} & \ThesisTiTleEng \\
-            \textbf{Name} & \AuNameEng \\
+            \textbf{Project Title} & \ThesisTiTleENGSnakecase \\
+            \textbf{Student} & \AuNameENGSnakecase \\
             \textbf{Student ID} & \SId \\
-            \textbf{Department} & \DepartmentEng \\
+            \textbf{Program} & Information Technology \\
             \textbf{Advisor} & \AdvisorEng \\
-            \textbf{Year} & \AcaY
+            \textbf{Year} & \AcaYAD
         \end{tabularx}
-    \end{table}    
+    \end{table}
+    
     
     \vskip1cm
     \begin{center}
-        \textbf{\large Abstract}
+        \textbf{\Large Abstract}
     \end{center}
     
     #1
 }
 
-\newcommand\startappendix{
+\newcommand\startappendix{    
     \appendix
-    \renewcommand*{\appendixname}{ภาคผนวก}
+    
+    \renewcommand*{\appendixname}{}
     \renewcommand{\thechapter}{\thaialph{chapter}}
     
+    \titleformat{\chapter}[display]{\normalfont\Large\bfseries\centering}{}{0pt}
+    { 
+        \thispagestyle{empty}
+        \begin{center}
+            \vspace*{\stretch{1}}\LARGE{\textbf{ภาคผนวก \thechapter}}\vspace*{\stretch{1}}
+        \end{center}
+        \clearpage
+        \LARGE
+    }
+    \titlespacing*{\chapter}{0pt}{-3.2\baselineskip}{2em}
+    
     \titlecontents{chapter}[0mm]
-    {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{สารบัญ}}
+    {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{\contentsname}}
     {ภาคผนวก\hspace{1ex}\thecontentslabel\hspace{2mm}}
     {}{\hfill \contentspage}
 }
