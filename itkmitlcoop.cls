@@ -20,7 +20,9 @@
 \RequirePackage{etoolbox}
 \RequirePackage[labelfont=bf]{caption}
 \RequirePackage{geometry}
+\RequirePackage{hyperref}
 
+\hypersetup{colorlinks=false}
 \geometry{text={7in,9.5in},headheight=15pt}
 
 % ##### new command for Roman number
@@ -48,6 +50,11 @@
 \titleformat{\subsection}
 {\normalfont\bfseries}{\thesubsection}{0.5em}{}
 \titlespacing*{\subsection}{0pt}{1em}{0.25em}
+
+\setcounter{secnumdepth}{3}
+\titleformat{\subsubsection}
+{\normalfont\bfseries}{\thesubsubsection}{0.5em}{}
+\titlespacing*{\subsubsection}{0pt}{1em}{0.25em}
 
 % ##### Re-define word
 \renewcommand{\bibname}{บรรณานุกรม}
