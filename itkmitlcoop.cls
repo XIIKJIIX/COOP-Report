@@ -278,8 +278,9 @@
 
 \newcommand{\makeletter}{
     %-- หนังสือส่งรายงานการปฏิบัติงานสหกิจศึกษา -------------------------------------------
-    \newpage
-    \thispagestyle{empty}
+   	\newpage
+   	\setcounter{page}{1}
+   	\addcontentsline{toc}{chapter}{หนังสือส่งรายงานการปฏิบัติงานสหกิจศึกษา}
     \begin{flushright}
         วันที่ \SubD
     \end{flushright}
@@ -308,7 +309,7 @@
 \newcommand{\makeack}[1]{
     %-- ACKNOWLEDGEMENTS Page -------------------------------------------
     \newpage
-    \thispagestyle{empty}
+    \addcontentsline{toc}{chapter}{กิตติกรรมประกาศ}
     \begin{center}
         {\LARGE \textbf{กิตติกรรมประกาศ} }
     \end{center} \vskip2em
@@ -333,7 +334,7 @@
     %-X- หน้าอนุมัติรายงาน -X------------------------------------------
     % Do NOT EDIT this page
     \newpage
-    \thispagestyle{empty}
+    \addcontentsline{toc}{chapter}{เอกสารอนุมัติรายงาน}
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
             \textbf{ชื่อรายงานการปฏิบัติงานสหกิจศึกษา} & \ThesisTiTle \\
@@ -362,7 +363,6 @@
 
 \newcommand{\makeabstract}[1]{
     %-- Abstract Page ------------------------------------------
-    \setcounter{page}{1}
     \newpage
     \addcontentsline{toc}{chapter}{บทคัดย่อ}
     
