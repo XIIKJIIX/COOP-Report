@@ -390,7 +390,7 @@
 \newcommand{\makeengabstract}[1]{
     %-- Abstract Page ------------------------------------------
     \newpage
-    \addcontentsline{toc}{chapter}{Abstract}
+    \addcontentsline{toc}{chapter}{ABSTRACT}
     
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
@@ -406,7 +406,7 @@
     
     \vskip1cm
     \begin{center}
-        \textbf{\Large Abstract}
+        \textbf{\Large ABSTRACT}
     \end{center}
     
     #1
