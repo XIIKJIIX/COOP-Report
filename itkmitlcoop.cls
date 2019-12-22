@@ -215,8 +215,8 @@
     \thispagestyle{empty}
     
     \begin{center}
-        \Large{\textbf{รายงานการปฏิบัติงานสหกิจศึกษา}} \vskip1cm
-        \LARGE{\textbf{เรื่อง}} \\
+        \Large{\textbf{รายงานการปฏิบัติงานสหกิจศึกษา}} \\
+        \LARGE{\textbf{เรื่อง}}
         \LARGE{\textbf{\ThesisTiTle}} \\
         \LARGE{\textbf{\ThesisTiTleENG}} \vskip3cm
         \Large{\textbf{ปฎิบัติงาน ณ \Company}} \vskip1cm
@@ -237,11 +237,12 @@
     \begin{center}
         \Large{\textbf{รายงานการปฏิบัติงานสหกิจศึกษา}} \\
         \LARGE{\textbf{\ThesisTiTle}} \\
-        \LARGE{\textbf{\ThesisTiTleENG}} \vskip4cm
-        \Large{\textbf{ปฎิบัติงาน ณ \Company}} \vskip1cm
-        \Large{\textbf{โดย}} \vskip1cm
+        \LARGE{\textbf{\ThesisTiTleENG}} \vskip3cm
+        \Large{\textbf{โดย}} \\
         \Large{\textbf{\AuName}}  \\
-        \Large{\textbf{รหัสประจำตัว \SId}} \null \vfill
+        \Large{\textbf{รหัสประจำตัว \SId}} \vskip3cm
+        \Large{\textbf{อาจารย์ที่ปรึกษา}} \\
+        \Large{\textbf{\Advisor}} \null \vfill
         \large{\textbf{ปฏิบัติงาน ณ \Company \\
                 \Address \\ 
                 Web site : \Website}}
