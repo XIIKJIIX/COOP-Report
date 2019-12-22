@@ -236,7 +236,7 @@
     \newpage
     \thispagestyle{empty}
     \begin{center}
-        \Large{\textbf{รายงานการปฏิบัติงานสหกิจศึกษา}} \\
+        \Large{\textbf{รายงานปฏิบัติงานสหกิจศึกษา}} \\
         \LARGE{\textbf{\ThesisTiTle}} \\
         \LARGE{\textbf{\ThesisTiTleENG}} \vskip3cm
         \Large{\textbf{โดย}} \\
