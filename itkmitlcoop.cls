@@ -46,6 +46,7 @@
 
 \titleformat{\section}
 {\normalfont\large\bfseries}{\thesection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1em}{0.25em}
 
 \titleformat{\subsection}
 {\normalfont\bfseries}{\thesubsection}{0.5em}{}
