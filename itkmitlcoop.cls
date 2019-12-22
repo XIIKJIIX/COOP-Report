@@ -42,7 +42,7 @@
 \titleformat{\chapter}[display]
 {\normalfont\Large\bfseries\centering}
 {\chaptertitlename\ \thechapter}{0pt}{\LARGE}
-\titlespacing*{\chapter}{0pt}{-2\baselineskip}{2em}
+\titlespacing*{\chapter}{0pt}{-1\baselineskip}{2em}
 
 \titleformat{\section}
 {\normalfont\large\bfseries}{\thesection}{0.5em}{}
