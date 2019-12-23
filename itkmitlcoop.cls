@@ -371,12 +371,12 @@
     
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
-            \textbf{ชื่อรายงาน} & \ThesisTiTle \\
-            \textbf{ชื่อนักศึกษา} & \AuName \\
-            \textbf{รหัสนักศึกษา} & \SId \\
-            \textbf{สาขาวิชา} & เทคโนโลยีสารสนเทศ \\
-            \textbf{อาจารย์ที่ปรึกษา} & \Advisor \\
-            \textbf{ปีการศึกษา} & \AcaY
+            ชื่อรายงาน & \ThesisTiTle \\
+            ชื่อนักศึกษา & \AuName \\
+            รหัสนักศึกษา & \SId \\
+            สาขาวิชา & เทคโนโลยีสารสนเทศ \\
+            อาจารย์ที่ปรึกษา & \Advisor \\
+            ปีการศึกษา & \AcaY
         \end{tabularx}
     \end{table}
     
@@ -395,12 +395,12 @@
     
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
-            \textbf{Project Title} & \ThesisTiTleENGSnakecase \\
-            \textbf{Student} & \AuNameENGSnakecase \\
-            \textbf{Student ID} & \SId \\
-            \textbf{Program} & Information Technology \\
-            \textbf{Advisor} & \AdvisorEng \\
-            \textbf{Year} & \AcaYAD
+            Project Title & \ThesisTiTleENGSnakecase \\
+            Student & \AuNameENGSnakecase \\
+            Student ID & \SId \\
+            Program & Information Technology \\
+            Advisor & \AdvisorEng \\
+            Year & \AcaYAD
         \end{tabularx}
     \end{table}
     
