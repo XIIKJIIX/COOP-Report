@@ -258,7 +258,7 @@
         \LARGE{\textbf{\ThesisTiTleENG}} \vskip7cm
         \Large{\textbf{\AuNameENG}}  \null \vfill
         \large{\textbf{A REPORT SUBMITTED IN PARTIAL FULFILLMENT OF \\
-                THE REQUIREMENT FOR COOPERATING EDUCATION PROGRAM \\
+                THE REQUIREMENT FOR COOPERATIVE EDUCATION PROGRAM \\
                 THE DEGREE OF BACHELOR OF SCIENCE PROGRAM IN \\
                 INFORMATION TECHNOLOGY \\
                 FACULTY OF INFORMATION TECNOLOGY \\
